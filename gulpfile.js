@@ -25,6 +25,11 @@ var gulp = require('gulp');
 // });
 
 
-gulp.task('default',['uglify'], function() {
+// gulp.task('default',['uglify'], function() {
+//     console.log('Deu Certo');
+// });
+
+
+gulp.task('default', function() {
     console.log('Deu Certo');
 });
