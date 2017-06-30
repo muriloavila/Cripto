@@ -16,13 +16,13 @@ gulp.task('jshint', function() {
 
 
 //compressor
-// gulp.task('uglify', function() {
-//     gulp.src('*.js')
-//     .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
-//     .pipe(uglify())
-//     .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
-//     .pipe(gulp.dest('dist'));
-// });
+gulp.task('uglify', function() {
+    gulp.src('*.js')
+    .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
+    .pipe(uglify())
+    .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
+    .pipe(gulp.dest('dist'));
+});
 
 
 gulp.task('default',['jshint'], function() {

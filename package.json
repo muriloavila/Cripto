@@ -1,8 +1,12 @@
 {
-	"dependencies":{
-		"gulp" : "latest",
-		"gulp-jshint" : "latest",
-		"gulp-uglify" : "latest",
-		"gulp-convert-encoding" : "latest"
-	}
-}	
+  "name": "gulp-comp",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "latest",
+    "gulp-uglify": "latest",
+    "gulp-convert-encoding": "latest"
+  }
+}
