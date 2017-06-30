@@ -38,10 +38,9 @@ gulp.task('compress', function() {
         ignoreFiles: ['.combo.js', '-min.js']
     }))
     .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
-    .pipe(gulp.dest(''))
+    .pipe(gulp.dest(''));
 });
 
 gulp.task('default',['compress'], function() {
     console.log('Deu Certo');
 });
-
