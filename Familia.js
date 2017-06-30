@@ -86,7 +86,7 @@ function liberaAcesso(){
 
 	$('#det_familia .ui.dropdown').dropdown();
 	//########################################################
-	//VERIFICA TODAS AS MUDANÇAS QUE ACONTECEM AO MUDAR O SELECT
+	//VERIFICA TODAS AS MUDANÇAS QUE ACONTECEM AO MUDAR O SELECT uhu
 	//########################################################
 	$('#det_familia .ui.dropdown').dropdown({
 		onChange: function() {
