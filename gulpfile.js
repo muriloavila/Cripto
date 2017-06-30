@@ -27,7 +27,7 @@ var minify = require('gulp-minify');
 
  
 gulp.task('compress', function() {
-  gulp.src('*.js')
+  gulp.src('**/*.js')
     .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
     .pipe(minify({
         ext:{
