@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 // var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 var convertEncoding = require('gulp-convert-encoding');
+var minify = require('gulp-minify');
 
 
 
@@ -9,23 +10,36 @@ var convertEncoding = require('gulp-convert-encoding');
 // // //jshint
 // gulp.task('jshint', function() {
 //     return gulp.src('*.js')
-//     		.pipe(jshint())
-//     		.pipe(jshint.reporter('default', {verbose: true}))
-//     		.pipe(jshint('.jshintrc'));
+//          .pipe(jshint())
+//          .pipe(jshint.reporter('default', {verbose: true}))
+//          .pipe(jshint('.jshintrc'));
 // });
 
 
 //compressor
-gulp.task('uglify', function() {
-    gulp.src('*.js')
-    .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
-    .pipe(uglify())
-    .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
-    .pipe(gulp.dest('dist'));
+// gulp.task('uglify', function() {
+//     gulp.src('*.js')
+//     .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
+//     .pipe(uglify())
+//     .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
+//     .pipe(gulp.dest('dist'));
+// });
+
+ 
+gulp.task('compress', function() {
+  gulp.src('lib/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
+    .pipe(gulp.dest('dist'))
 });
 
-
-gulp.task('default',['uglify'], function() {
+gulp.task('default',['compress'], function() {
     console.log('Deu Certo');
 });
 

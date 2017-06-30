@@ -7,6 +7,7 @@
     "gulp": "^3.9.1",
     "gulp-jshint": "latest",
     "gulp-uglify": "latest",
-    "gulp-convert-encoding": "latest"
+    "gulp-convert-encoding": "latest",
+    "gulp-minify":"latest"
   }
 }
