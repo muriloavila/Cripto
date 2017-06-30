@@ -1,18 +1,18 @@
 var gulp = require('gulp');
-var jshint = require('gulp-jshint');
+// var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var convertEncoding = require('gulp-convert-encoding');
 
 
 
 
-// //jshint
-gulp.task('jshint', function() {
-    return gulp.src('*.js')
-    		.pipe(jshint())
-    		.pipe(jshint.reporter('default', {verbose: true}))
-    		.pipe(jshint('.jshintrc'));
-});
+// // //jshint
+// gulp.task('jshint', function() {
+//     return gulp.src('*.js')
+//     		.pipe(jshint())
+//     		.pipe(jshint.reporter('default', {verbose: true}))
+//     		.pipe(jshint('.jshintrc'));
+// });
 
 
 //compressor
@@ -25,7 +25,7 @@ gulp.task('uglify', function() {
 });
 
 
-gulp.task('default',['jshint'], function() {
+gulp.task('default',['uglify'], function() {
     console.log('Deu Certo');
 });
 
