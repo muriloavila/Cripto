@@ -1,0 +1,8 @@
+{
+	"dependencies":{
+		"gulp" : "latest",
+		"gulp-jshint" : "latest",
+		"gulp-uglify" : "latest",
+		"gulp-convert-encoding" : "latest"
+	}
+}	
