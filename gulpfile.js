@@ -17,12 +17,11 @@ var convertEncoding = require('gulp-convert-encoding');
 
 //compressor
 gulp.task('uglify', function() {
-    // gulp.src('*.js')
-    // .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
-    // .pipe(uglify())
-    // .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
-    // .pipe(gulp.dest('dist'));
-    console.log('Ola');
+    gulp.src('*.js')
+    .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
+    .pipe(uglify())
+    .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
+    .pipe(gulp.dest('dist'));
 });
 
 
