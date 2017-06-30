@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 // var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 // var convertEncoding = require('gulp-convert-encoding');
 
 
