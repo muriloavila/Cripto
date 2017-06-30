@@ -31,6 +31,7 @@ gulp.task('compress', function() {
     .pipe(convertEncoding({from: 'ISO-8859-1', to: 'UTF-8'}))
     .pipe(minify({
         ext:{
+            src:'-debug.js',
             min:'.js'
         },
         exclude: ['tasks'],
