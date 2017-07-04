@@ -5,9 +5,12 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-jshint": "latest",
-    "gulp-uglify": "latest",
+    "gulp-chmod": "^2.0.0",
+    "gulp-clean": "^0.3.2",
     "gulp-convert-encoding": "latest",
-    "gulp-minify":"latest"
+    "gulp-debug": "^3.1.0",
+    "gulp-jshint": "latest",
+    "gulp-minify": "latest",
+    "gulp-uglify": "latest"
   }
 }
