@@ -1,3 +1,4 @@
+//COMENTARIO
 function contaAnexos(){
 	var qtdAnexos = get("listaAnexos").getElementsByTagName("label");
 	return qtdAnexos.length;
