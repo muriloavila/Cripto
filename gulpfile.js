@@ -1,14 +1,11 @@
 var gulp = require('gulp');
-var tap = require('gulp-tap');
 var convertEncoding = require('gulp-convert-encoding');
 var minify = require('gulp-minify');
-var clean = require('gulp-clean');
 var chmod = require('gulp-chmod');
-var changed = require('gulp-changed');
-debug = require('gulp-debug');
+var debug = require('gulp-debug');
 
 
-var path = ['../Icarus/**/**/*.js', '!../Icarus/base/**/', '!../Icarus/component/**/', '!../Icarus/api/vendor/**/*'];
+var path = ['Icarus/**/**/*.js', '!Icarus/base/**/*.js', '!Icarus/component/**/', '!Icarus/api/vendor/**/*'];
 
 gulp.task('teste', function() {
     gulp.src(path)
