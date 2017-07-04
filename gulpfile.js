@@ -5,7 +5,7 @@ var chmod = require('gulp-chmod');
 var debug = require('gulp-debug');
 
 
-var path = ['Icarus/**/**/*.js', '!Icarus/base/**/*.js', '!Icarus/component/**/', '!Icarus/api/vendor/**/*'];
+var path = ['ICARUS/**/**/*.js', '!ICARUS/base/**/*.js', '!ICARUS/component/**/', '!ICARUS/api/**/**/*', '!ICARUS/api/**/**/*'];
 
 gulp.task('teste', function() {
     gulp.src(path)
@@ -22,7 +22,7 @@ gulp.task('compress', function() {
                 min:'.js'
             },
             exclude: ['tasks'],
-            ignoreFiles: ['.combo.js', '.min.js'],
+            ignoreFiles: ['.combo.js', '.min.js', 'jquery.min.js'],
             noSource: true
         }))
         .pipe(convertEncoding({from: 'UTF-8', to: 'ISO-8859-1'}))
